@@ -3,27 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AE0515FB2686DD12009517C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0515FA2686DD12009517C0 /* AppDelegate.swift */; };
 		AE0515FD2686DD12009517C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0515FC2686DD12009517C0 /* SceneDelegate.swift */; };
-		AE0515FF2686DD12009517C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0515FE2686DD12009517C0 /* ViewController.swift */; };
+		AE0515FF2686DD12009517C0 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0515FE2686DD12009517C0 /* OrderViewController.swift */; };
 		AE0516022686DD12009517C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0516002686DD12009517C0 /* Main.storyboard */; };
 		AE0516042686DD14009517C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE0516032686DD14009517C0 /* Assets.xcassets */; };
 		AE0516072686DD14009517C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0516052686DD14009517C0 /* LaunchScreen.storyboard */; };
+		AE05161326892789009517C0 /* CookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05161226892789009517C0 /* CookViewController.swift */; };
+		AE05161526893E7E009517C0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05161426893E7E009517C0 /* TabBarController.swift */; };
+		AE05161D26895215009517C0 /* OrderedProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05161B26895215009517C0 /* OrderedProductCell.swift */; };
+		AE05161E26895215009517C0 /* OrderedProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE05161C26895215009517C0 /* OrderedProductCell.xib */; };
+		AE051622268954D0009517C0 /* OrderedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE051621268954D0009517C0 /* OrderedProduct.swift */; };
+		D40085A21175F86B1B28E58C /* Pods_ArmanosDinnerClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42429A6C11725C4033FB7911 /* Pods_ArmanosDinnerClub.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42429A6C11725C4033FB7911 /* Pods_ArmanosDinnerClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArmanosDinnerClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		575047272A25A0016AD06E10 /* Pods-ArmanosDinnerClub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArmanosDinnerClub.release.xcconfig"; path = "Target Support Files/Pods-ArmanosDinnerClub/Pods-ArmanosDinnerClub.release.xcconfig"; sourceTree = "<group>"; };
+		713D4C4FAAFD2CBA57D7B233 /* Pods-ArmanosDinnerClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArmanosDinnerClub.debug.xcconfig"; path = "Target Support Files/Pods-ArmanosDinnerClub/Pods-ArmanosDinnerClub.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0515F72686DD12009517C0 /* ArmanosDinnerClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArmanosDinnerClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0515FA2686DD12009517C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE0515FC2686DD12009517C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE0515FE2686DD12009517C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE0515FE2686DD12009517C0 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		AE0516012686DD12009517C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE0516032686DD14009517C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE0516062686DD14009517C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE0516082686DD14009517C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE05161226892789009517C0 /* CookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookViewController.swift; sourceTree = "<group>"; };
+		AE05161426893E7E009517C0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		AE05161B26895215009517C0 /* OrderedProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedProductCell.swift; sourceTree = "<group>"; };
+		AE05161C26895215009517C0 /* OrderedProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderedProductCell.xib; sourceTree = "<group>"; };
+		AE051621268954D0009517C0 /* OrderedProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedProduct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D40085A21175F86B1B28E58C /* Pods_ArmanosDinnerClub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FB18A74CD3D0CC0C77E5730 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				713D4C4FAAFD2CBA57D7B233 /* Pods-ArmanosDinnerClub.debug.xcconfig */,
+				575047272A25A0016AD06E10 /* Pods-ArmanosDinnerClub.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AE0515EE2686DD12009517C0 = {
 			isa = PBXGroup;
 			children = (
 				AE0515F92686DD12009517C0 /* ArmanosDinnerClub */,
 				AE0515F82686DD12009517C0 /* Products */,
+				1FB18A74CD3D0CC0C77E5730 /* Pods */,
+				B0C65D5D911F111FC786FB92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +84,42 @@
 			children = (
 				AE0515FA2686DD12009517C0 /* AppDelegate.swift */,
 				AE0515FC2686DD12009517C0 /* SceneDelegate.swift */,
-				AE0515FE2686DD12009517C0 /* ViewController.swift */,
+				AE0516202689522D009517C0 /* Model */,
+				AE05160E26891E14009517C0 /* View */,
 				AE0516002686DD12009517C0 /* Main.storyboard */,
 				AE0516032686DD14009517C0 /* Assets.xcassets */,
 				AE0516052686DD14009517C0 /* LaunchScreen.storyboard */,
 				AE0516082686DD14009517C0 /* Info.plist */,
 			);
 			path = ArmanosDinnerClub;
+			sourceTree = "<group>";
+		};
+		AE05160E26891E14009517C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE0515FE2686DD12009517C0 /* OrderViewController.swift */,
+				AE05161226892789009517C0 /* CookViewController.swift */,
+				AE05161426893E7E009517C0 /* TabBarController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AE0516202689522D009517C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE05161B26895215009517C0 /* OrderedProductCell.swift */,
+				AE05161C26895215009517C0 /* OrderedProductCell.xib */,
+				AE051621268954D0009517C0 /* OrderedProduct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0C65D5D911F111FC786FB92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42429A6C11725C4033FB7911 /* Pods_ArmanosDinnerClub.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE05160B2686DD14009517C0 /* Build configuration list for PBXNativeTarget "ArmanosDinnerClub" */;
 			buildPhases = (
+				27F1EFF3E17705B8DE289816 /* [CP] Check Pods Manifest.lock */,
 				AE0515F32686DD12009517C0 /* Sources */,
 				AE0515F42686DD12009517C0 /* Frameworks */,
 				AE0515F52686DD12009517C0 /* Resources */,
+				E9A86D64E31B03526741D1F6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE0516072686DD14009517C0 /* LaunchScreen.storyboard in Resources */,
+				AE05161E26895215009517C0 /* OrderedProductCell.xib in Resources */,
 				AE0516042686DD14009517C0 /* Assets.xcassets in Resources */,
 				AE0516022686DD12009517C0 /* Main.storyboard in Resources */,
 			);
@@ -132,14 +190,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		27F1EFF3E17705B8DE289816 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ArmanosDinnerClub-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9A86D64E31B03526741D1F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArmanosDinnerClub/Pods-ArmanosDinnerClub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArmanosDinnerClub/Pods-ArmanosDinnerClub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArmanosDinnerClub/Pods-ArmanosDinnerClub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE0515F32686DD12009517C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE0515FF2686DD12009517C0 /* ViewController.swift in Sources */,
+				AE051622268954D0009517C0 /* OrderedProduct.swift in Sources */,
+				AE0515FF2686DD12009517C0 /* OrderViewController.swift in Sources */,
+				AE05161326892789009517C0 /* CookViewController.swift in Sources */,
 				AE0515FB2686DD12009517C0 /* AppDelegate.swift in Sources */,
+				AE05161526893E7E009517C0 /* TabBarController.swift in Sources */,
 				AE0515FD2686DD12009517C0 /* SceneDelegate.swift in Sources */,
+				AE05161D26895215009517C0 /* OrderedProductCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +387,7 @@
 		};
 		AE05160C2686DD14009517C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 713D4C4FAAFD2CBA57D7B233 /* Pods-ArmanosDinnerClub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +407,7 @@
 		};
 		AE05160D2686DD14009517C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 575047272A25A0016AD06E10 /* Pods-ArmanosDinnerClub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

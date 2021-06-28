@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  CookViewController.swift
 //  ArmanosDinnerClub
 //
-//  Created by Stepanyan Arman  on 25.06.2021.
+//  Created by Stepanyan Arman  on 27.06.2021.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class CookViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
