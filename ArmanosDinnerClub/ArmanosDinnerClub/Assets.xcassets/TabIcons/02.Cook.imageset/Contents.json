@@ -1,16 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "output-onlinepngtools-4.png",
+      "filename" : "iconColorACopy2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "iconColorACopy2@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "output-onlinepngtools-3.png",
+      "filename" : "iconColorACopy2@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

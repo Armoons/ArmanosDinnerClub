@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H45-Tj-cad">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -19,7 +21,7 @@
                         <viewLayoutGuide key="safeArea" id="FHn-DC-YEI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="02.Cook" selectedImage="04.Selected Cook" id="N70-ie-3Gl">
+                    <tabBarItem key="tabBarItem" image="02.Cook" selectedImage="02.Cook" id="N70-ie-3Gl">
                         <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-2"/>
                     </tabBarItem>
                 </viewController>
@@ -45,7 +47,7 @@
                                     <inset key="sectionInset" minX="26.5" minY="30" maxX="26" maxY="95"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KR3-b7-gno">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="KR3-b7-gno">
                                         <rect key="frame" x="26.5" y="30" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qpo-tZ-1fu">
@@ -66,7 +68,7 @@
                             <constraint firstItem="sEO-k6-TSA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="laE-Fx-8IQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="01.Dinner" selectedImage="03.Selected Dinner" id="RF4-gw-cfC">
+                    <tabBarItem key="tabBarItem" title="" image="01.Dinner" selectedImage="01.Dinner" id="RF4-gw-cfC">
                         <inset key="imageInsets" minX="0.0" minY="-5" maxX="0.0" maxY="5"/>
                     </tabBarItem>
                     <connections>
@@ -83,9 +85,10 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="H45-Tj-cad" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G2N-Sz-doY">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.52156862745098043" green="0.0039215686274509803" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" name="CoolRed"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="FC6-v8-ezR"/>
@@ -98,10 +101,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="01.Dinner" width="46" height="46"/>
-        <image name="02.Cook" width="36" height="36"/>
-        <image name="03.Selected Dinner" width="46" height="46"/>
-        <image name="04.Selected Cook" width="36" height="36"/>
+        <image name="01.Dinner" width="30" height="30"/>
+        <image name="02.Cook" width="30" height="30"/>
+        <namedColor name="CoolRed">
+            <color red="0.52156862745098043" green="0.0039215686274509803" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
