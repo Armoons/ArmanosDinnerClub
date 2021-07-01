@@ -11,6 +11,7 @@ struct Product {
     var Name: String
     var Price: Int
     var Image: UIImage
+    var Index: Int
 }
 class Products{
     var productsArray = [Product]()
@@ -21,18 +22,18 @@ class Products{
     }
     func setup(){
         image?.withTintColor(.green)
-        let p1 = Product(Name: "Бургер", Price: 130, Image: UIImage(named: "image")!)
-        let p2 = Product(Name: "Картоха", Price: 54, Image: UIImage(named: "image")!)
-        let p3 = Product(Name: "Твистер", Price: 175, Image: UIImage(named: "image")!)
-        let p4 = Product(Name: "Бургер", Price: 130, Image: UIImage(named: "image")!)
-        let p5 = Product(Name: "Картоха", Price: 54, Image: UIImage(named: "image")!)
-        let p6 = Product(Name: "Твистер", Price: 175, Image: UIImage(named: "image")!)
-        let p7 = Product(Name: "Бургер", Price: 130, Image: UIImage(named: "image")!)
-        let p8 = Product(Name: "Картоха", Price: 54, Image: UIImage(named: "image")!)
-        let p9 = Product(Name: "Твистер", Price: 175, Image: UIImage(named: "image")!)
-        let p10 = Product(Name: "Бургер", Price: 130, Image: UIImage(named: "image")!)
-        let p11 = Product(Name: "Картоха", Price: 54, Image: UIImage(named: "image")!)
-        let p12 = Product(Name: "Твистер", Price: 175, Image: UIImage(named: "image")!)
+        let p1 = Product(Name: "Бургер", Price: 130, Image: UIImage(named: "image")!, Index: 1)
+        let p2 = Product(Name: "Картоха", Price: 54, Image: UIImage(named: "image")!, Index: 2)
+        let p3 = Product(Name: "Твистер", Price: 175, Image: UIImage(named: "image")!, Index: 3)
+        let p4 = Product(Name: "Бургер", Price: 130, Image: UIImage(named: "image")!, Index: 4)
+        let p5 = Product(Name: "Картоха", Price: 54, Image: UIImage(named: "image")!, Index: 5)
+        let p6 = Product(Name: "Твистер", Price: 175, Image: UIImage(named: "image")!, Index: 6)
+        let p7 = Product(Name: "Бургер", Price: 130, Image: UIImage(named: "image")!, Index: 7)
+        let p8 = Product(Name: "Картоха", Price: 54, Image: UIImage(named: "image")!, Index: 8)
+        let p9 = Product(Name: "Твистер", Price: 175, Image: UIImage(named: "image")!, Index: 9)
+        let p10 = Product(Name: "Бургер", Price: 130, Image: UIImage(named: "image")!, Index: 10)
+        let p11 = Product(Name: "Картоха", Price: 54, Image: UIImage(named: "image")!, Index: 11)
+        let p12 = Product(Name: "Твистер", Price: 175, Image: UIImage(named: "image")!, Index: 12)
         productsArray = [p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12]
     }
     
