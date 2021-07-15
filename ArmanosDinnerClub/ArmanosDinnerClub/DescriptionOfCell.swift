@@ -31,12 +31,10 @@ class Description: UIViewController{
         let priceOrderedLable = UILabel()
         let orderButton = UIButton()
         view.backgroundColor = .white
-        for i in [nameOrderedLabel, iconOrdered, descriptionOrderedLabel, priceOrderedLable,orderButton]{
+        for i in [nameOrderedLabel, iconOrdered, descriptionOrderedLabel, priceOrderedLable, orderButton]{
             view.addSubview(i)
         }
         nameOrderedLabel.text = "Картоха"
-        let widthOfName = nameOrderedLabel.bounds.size.width
-        print(widthOfName)
         nameOrderedLabel.font = UIFont.boldSystemFont(ofSize: 24)
 //        nameLabel.backgroundColor = .red
 //        nameLabel.adjustsFontSizeToFitWidth = true

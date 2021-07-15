@@ -21,7 +21,6 @@ class Products{
         setup()
     }
     func setup(){
-        image?.withTintColor(.green)
         let p1 = Product(Name: "Бургер", Price: 130, Image: UIImage(named: "image")!, Index: 1)
         let p2 = Product(Name: "Картоха", Price: 54, Image: UIImage(named: "image")!, Index: 2)
         let p3 = Product(Name: "Твистер", Price: 175, Image: UIImage(named: "image")!, Index: 3)

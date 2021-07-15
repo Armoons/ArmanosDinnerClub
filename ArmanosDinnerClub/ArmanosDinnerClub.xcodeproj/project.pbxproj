@@ -14,7 +14,6 @@
 		AE0516042686DD14009517C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE0516032686DD14009517C0 /* Assets.xcassets */; };
 		AE0516072686DD14009517C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0516052686DD14009517C0 /* LaunchScreen.storyboard */; };
 		AE05161326892789009517C0 /* CookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05161226892789009517C0 /* CookViewController.swift */; };
-		AE05161526893E7E009517C0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05161426893E7E009517C0 /* TabBarController.swift */; };
 		AE05161D26895215009517C0 /* OrderedProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05161B26895215009517C0 /* OrderedProductCell.swift */; };
 		AE05161E26895215009517C0 /* OrderedProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE05161C26895215009517C0 /* OrderedProductCell.xib */; };
 		AE051622268954D0009517C0 /* OrderedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE051621268954D0009517C0 /* OrderedProduct.swift */; };
@@ -35,7 +34,6 @@
 		AE0516062686DD14009517C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE0516082686DD14009517C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE05161226892789009517C0 /* CookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookViewController.swift; sourceTree = "<group>"; };
-		AE05161426893E7E009517C0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AE05161B26895215009517C0 /* OrderedProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedProductCell.swift; sourceTree = "<group>"; };
 		AE05161C26895215009517C0 /* OrderedProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderedProductCell.xib; sourceTree = "<group>"; };
 		AE051621268954D0009517C0 /* OrderedProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedProduct.swift; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				AE0515FE2686DD12009517C0 /* OrderViewController.swift */,
 				AE0DFF2A268D0A0200C73ED3 /* DescriptionOfCell.swift */,
 				AE05161226892789009517C0 /* CookViewController.swift */,
-				AE05161426893E7E009517C0 /* TabBarController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -245,7 +242,6 @@
 				AE05161326892789009517C0 /* CookViewController.swift in Sources */,
 				AE0DFF2B268D0A0200C73ED3 /* DescriptionOfCell.swift in Sources */,
 				AE0515FB2686DD12009517C0 /* AppDelegate.swift in Sources */,
-				AE05161526893E7E009517C0 /* TabBarController.swift in Sources */,
 				AE0515FD2686DD12009517C0 /* SceneDelegate.swift in Sources */,
 				AE05161D26895215009517C0 /* OrderedProductCell.swift in Sources */,
 			);

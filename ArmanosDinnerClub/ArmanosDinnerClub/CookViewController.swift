@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CookViewController: UIViewController{
+class CookViewController: UIViewController, UITextFieldDelegate{
     let nameTextField = TextField()
     let descriptionTextField = TextField()
     let priceTextField = TextField()
@@ -16,6 +16,7 @@ class CookViewController: UIViewController{
     let sButton = StackViewButton()
     let tButton = StackViewButton()
     let fButton = StackViewButton()
+    let cookButton = UIButton()
     let fHorStackView = UIStackView()
     let sHorStackView = UIStackView()
     let verStackView = UIStackView()
@@ -24,9 +25,25 @@ class CookViewController: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.nameTextField.delegate = self
+        self.descriptionTextField.delegate = self
+    
+        
         view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
-        for i in [nameTextField,descriptionTextField,priceTextField, verStackView] {
+        for i in [nameTextField,descriptionTextField,priceTextField, verStackView, cookButton] {
             view.addSubview(i)
+        }
+        cookButton.layer.cornerRadius = 29
+        cookButton.setTitle("Приготовить", for: .normal)
+        cookButton.backgroundColor = UIColor(red: 158/255, green: 177/255, blue: 185/255, alpha: 1)
+        cookButton.titleLabel?.font = cookButton.titleLabel?.font.withSize(18)
+        cookButton.setTitle("Заказать", for: .normal)
+        cookButton.setTitleColor(.white, for: .normal)
+        cookButton.snp.makeConstraints {
+            $0.bottomMargin.equalToSuperview().inset(22)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(220)
+            $0.height.equalTo(58)
         }
         //TextField
         nameTextField.placeholder = "Название"
@@ -49,13 +66,25 @@ class CookViewController: UIViewController{
     
         
         fiButton.setImage(UIImage(named: "burger"), for: .normal)
+//        fiButton.setImage(UIImage(named: "burger")?.withRenderingMode(.alwaysTemplate), for: .highlighted)
+//        fiButton.tintColor = UIColor(named: "CoolRed")
+        fiButton.addTarget(self, action: #selector(isSelected), for: .touchDown)
+        fiButton.tag = 1
         sButton.setImage(UIImage(named: "chips"), for: .normal)
+        sButton.setImage(UIImage(named: "chips")?.withRenderingMode(.alwaysTemplate), for: .highlighted)
+        sButton.tintColor = UIColor(named: "CoolRed")
+        sButton.tag = 2
         tButton.setImage(UIImage(named: "juice"), for: .normal)
+        tButton.setImage(UIImage(named: "juice")?.withRenderingMode(.alwaysTemplate), for: .highlighted)
+        tButton.tintColor = UIColor(named: "CoolRed")
+        tButton.tag = 3
         fButton.setImage(UIImage(named: "dish"), for: .normal)
+        fButton.setImage(UIImage(named: "dish")?.withRenderingMode(.alwaysTemplate), for: .highlighted)
+        fButton.tintColor = UIColor(named: "CoolRed")
+        fButton.tag = 4
         //StackView
         verStackView.addArrangedSubview(fHorStackView)
         verStackView.addArrangedSubview(sHorStackView)
-//        verStackView.backgroundColor = .black
         verStackView.alignment = .center
         verStackView.axis = .vertical
         verStackView.distribution = .fillEqually
@@ -67,20 +96,27 @@ class CookViewController: UIViewController{
         
         fHorStackView.addArrangedSubview(fiButton)
         fHorStackView.addArrangedSubview(sButton)
-//        fHorStackView.backgroundColor = .red
         fHorStackView.spacing = 16
         sHorStackView.addArrangedSubview(tButton)
         sHorStackView.addArrangedSubview(fButton)
-//        sHorStackView.backgroundColor = .blue
         sHorStackView.spacing = 16
-
-
-
     }
-    
+    @objc func isSelected(sender: UIButton){
+        sender.setImage(UIImage(named: "burger")?.withRenderingMode(.alwaysTemplate), for: .selected)
+        sender.tintColor = UIColor(named: "CoolRed")
+        print("ffr")
+    }
+    // Hide Keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
 class TextField: UITextField{
+    // placeholder position
     @IBInspectable var insetX: CGFloat = 0 {
            didSet {
              layoutIfNeeded()
@@ -91,11 +127,9 @@ class TextField: UITextField{
              layoutIfNeeded()
            }
         }
-        // placeholder position
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: insetX , dy: insetY)
         }
-        // text position
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: insetX , dy: insetY)
         }
@@ -114,13 +148,18 @@ class TextField: UITextField{
         initialize()
         self.snp.makeConstraints{$0.height.equalTo(60)}
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
+extension TextField{
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
 
 class StackViewButton: UIButton{
+    
     func initiliaze(){
         self.layer.cornerRadius = 12
         self.layer.backgroundColor = UIColor.white.cgColor
@@ -137,10 +176,17 @@ class StackViewButton: UIButton{
         }
     }
     
+//    init(foodIcon: UIImage){
+//    }
+//
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
 }
+
+
 
 
 
