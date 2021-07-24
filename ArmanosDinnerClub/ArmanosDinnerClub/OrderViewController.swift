@@ -17,8 +17,6 @@ class OrderViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
-
-
 }
 
 extension OrderViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -33,14 +31,20 @@ extension OrderViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let selectedItem  = orderedProduct.productsArray[indexPath.item]
+        present(DescriptionViewController(), animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let width = (UIScreen.main.bounds.size.width - 10) / 2
-        return CGSize(width: 167, height: 128)
+        return CGSize(width: (view.frame.width - 48) / 2, height: 128)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return CGFloat(24)
     }
-    
-    
 }
+
+
+    
+

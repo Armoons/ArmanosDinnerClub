@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "04.Selected Cook.png",
+      "filename" : "chips.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "chips@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "chips@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
