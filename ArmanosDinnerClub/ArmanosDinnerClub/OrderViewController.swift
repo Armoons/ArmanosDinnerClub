@@ -18,6 +18,7 @@ class OrderViewController: UIViewController {
         collectionView.delegate = self
     }
 }
+
 extension OrderViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return orderedProduct.productsArray.count
@@ -32,7 +33,7 @@ extension OrderViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        let selectedItem  = orderedProduct.productsArray[indexPath.item]
-        present(Description(), animated: true)
+        present(DescriptionViewController(), animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

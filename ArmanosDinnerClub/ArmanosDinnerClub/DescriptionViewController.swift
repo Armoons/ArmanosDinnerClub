@@ -9,39 +9,35 @@ import Foundation
 import UIKit
 import SnapKit
 
-struct viewInfo {
-    let nameLabel: String
-    let icon: UIImage
-    let descriptionLabel: String
-    let priceLable: String
-    let index: Int
-}
 
-
-
-class Description: UIViewController{
+class DescriptionViewController: UIViewController{
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
     }
+    
     private func initialize(){
         let nameOrderedLabel = UILabel()
         let iconOrdered = UIImageView()
         let descriptionOrderedLabel = UILabel()
         let priceOrderedLable = UILabel()
-        let orderButton = UIButton()
+        let orderButton = ActionButton(title: "Заказать")
         view.backgroundColor = .white
         for i in [nameOrderedLabel, iconOrdered, descriptionOrderedLabel, priceOrderedLable, orderButton]{
             view.addSubview(i)
         }
+        
+        orderButton.snp.makeConstraints{
+            $0.centerX.equalToSuperview()
+            $0.bottomMargin.equalToSuperview().inset(22)
+        }
+        
         nameOrderedLabel.text = "Картоха"
         nameOrderedLabel.font = UIFont.boldSystemFont(ofSize: 24)
-//        nameLabel.backgroundColor = .red
-//        nameLabel.adjustsFontSizeToFitWidth = true
         nameOrderedLabel.snp.makeConstraints { maker in
             maker.centerX.equalToSuperview().offset(-15)
             maker.topMargin.equalToSuperview().inset(40)
-//            maker.width.equalTo(nameLabel.frame.width)
         }
         
         iconOrdered.image = UIImage(named: "image")
@@ -55,7 +51,6 @@ class Description: UIViewController{
         descriptionOrderedLabel.snp.makeConstraints { maker in
             maker.left.right.equalToSuperview().inset(26)
             maker.top.equalTo(nameOrderedLabel.snp.bottom).inset(-10)
-//            maker.bottom.equalTo(priceLable).inset(5)
         }
         
         priceOrderedLable.text = "54" + " рубля"
@@ -65,18 +60,6 @@ class Description: UIViewController{
             maker.top.equalTo(orderButton).inset(-45)
         }
         
-        orderButton.layer.cornerRadius = 29
-        orderButton.backgroundColor = UIColor(red: 158/255, green: 177/255, blue: 185/255, alpha: 1)
-        orderButton.titleLabel?.font = orderButton.titleLabel?.font.withSize(18)
-        orderButton.setTitle("Заказать", for: .normal)
-        orderButton.setTitleColor(.white, for: .normal)
-        orderButton.snp.makeConstraints { maker in
-            maker.centerX.equalToSuperview()
-            maker.bottomMargin.equalToSuperview().inset(36)
-            maker.width.equalTo(220)
-            maker.height.equalTo(58)
-        }
+        
     }
-    
 }
-

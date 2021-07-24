@@ -16,8 +16,14 @@
 		AE05161326892789009517C0 /* CookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05161226892789009517C0 /* CookViewController.swift */; };
 		AE05161D26895215009517C0 /* OrderedProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05161B26895215009517C0 /* OrderedProductCell.swift */; };
 		AE05161E26895215009517C0 /* OrderedProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE05161C26895215009517C0 /* OrderedProductCell.xib */; };
-		AE051622268954D0009517C0 /* OrderedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE051621268954D0009517C0 /* OrderedProduct.swift */; };
-		AE0DFF2B268D0A0200C73ED3 /* DescriptionOfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0DFF2A268D0A0200C73ED3 /* DescriptionOfCell.swift */; };
+		AE051622268954D0009517C0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE051621268954D0009517C0 /* Product.swift */; };
+		AE0DFF2B268D0A0200C73ED3 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0DFF2A268D0A0200C73ED3 /* DescriptionViewController.swift */; };
+		AE3D47F126A387A3008ACAA3 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D47F026A387A3008ACAA3 /* UIView+Ext.swift */; };
+		AEA0FBCC26AC9BBA0041A15D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0FBCB26AC9BBA0041A15D /* TextField.swift */; };
+		AEA0FBCE26AC9C410041A15D /* ProductButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0FBCD26AC9C410041A15D /* ProductButton.swift */; };
+		AEA0FBD026AC9D150041A15D /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0FBCF26AC9D150041A15D /* ProductType.swift */; };
+		AEA0FBD226ACA1D90041A15D /* Optonal+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0FBD126ACA1D90041A15D /* Optonal+Ext.swift */; };
+		AEA0FBD426ACCF890041A15D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0FBD326ACCF890041A15D /* ActionButton.swift */; };
 		D40085A21175F86B1B28E58C /* Pods_ArmanosDinnerClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42429A6C11725C4033FB7911 /* Pods_ArmanosDinnerClub.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,8 +42,14 @@
 		AE05161226892789009517C0 /* CookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookViewController.swift; sourceTree = "<group>"; };
 		AE05161B26895215009517C0 /* OrderedProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedProductCell.swift; sourceTree = "<group>"; };
 		AE05161C26895215009517C0 /* OrderedProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderedProductCell.xib; sourceTree = "<group>"; };
-		AE051621268954D0009517C0 /* OrderedProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedProduct.swift; sourceTree = "<group>"; };
-		AE0DFF2A268D0A0200C73ED3 /* DescriptionOfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionOfCell.swift; sourceTree = "<group>"; };
+		AE051621268954D0009517C0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		AE0DFF2A268D0A0200C73ED3 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		AE3D47F026A387A3008ACAA3 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		AEA0FBCB26AC9BBA0041A15D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		AEA0FBCD26AC9C410041A15D /* ProductButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductButton.swift; sourceTree = "<group>"; };
+		AEA0FBCF26AC9D150041A15D /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
+		AEA0FBD126ACA1D90041A15D /* Optonal+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optonal+Ext.swift"; sourceTree = "<group>"; };
+		AEA0FBD326ACCF890041A15D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +96,10 @@
 			children = (
 				AE0515FA2686DD12009517C0 /* AppDelegate.swift */,
 				AE0515FC2686DD12009517C0 /* SceneDelegate.swift */,
-				AE0516202689522D009517C0 /* Model */,
-				AE05160E26891E14009517C0 /* View */,
+				AE0516202689522D009517C0 /* Models */,
+				AEA0FBC926AC9B7D0041A15D /* Components */,
+				AE05160E26891E14009517C0 /* Controllers */,
+				AE3D47EF26A38650008ACAA3 /* Extensions */,
 				AE0516002686DD12009517C0 /* Main.storyboard */,
 				AE0516032686DD14009517C0 /* Assets.xcassets */,
 				AE0516052686DD14009517C0 /* LaunchScreen.storyboard */,
@@ -94,24 +108,76 @@
 			path = ArmanosDinnerClub;
 			sourceTree = "<group>";
 		};
-		AE05160E26891E14009517C0 /* View */ = {
+		AE05160E26891E14009517C0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AE0515FE2686DD12009517C0 /* OrderViewController.swift */,
-				AE0DFF2A268D0A0200C73ED3 /* DescriptionOfCell.swift */,
-				AE05161226892789009517C0 /* CookViewController.swift */,
+				AEA0FBC526AC9A9D0041A15D /* Order */,
+				AEA0FBC626AC9AA50041A15D /* Description */,
+				AEA0FBC726AC9AB00041A15D /* Cook */,
 			);
-			name = View;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
-		AE0516202689522D009517C0 /* Model */ = {
+		AE0516202689522D009517C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE051621268954D0009517C0 /* Product.swift */,
+				AEA0FBCF26AC9D150041A15D /* ProductType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AE3D47EF26A38650008ACAA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE3D47F026A387A3008ACAA3 /* UIView+Ext.swift */,
+				AEA0FBD126ACA1D90041A15D /* Optonal+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AEA0FBC526AC9A9D0041A15D /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				AEA0FBC826AC9AC70041A15D /* Cells */,
+				AE0515FE2686DD12009517C0 /* OrderViewController.swift */,
+			);
+			name = Order;
+			sourceTree = "<group>";
+		};
+		AEA0FBC626AC9AA50041A15D /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				AE0DFF2A268D0A0200C73ED3 /* DescriptionViewController.swift */,
+			);
+			name = Description;
+			sourceTree = "<group>";
+		};
+		AEA0FBC726AC9AB00041A15D /* Cook */ = {
+			isa = PBXGroup;
+			children = (
+				AE05161226892789009517C0 /* CookViewController.swift */,
+			);
+			name = Cook;
+			sourceTree = "<group>";
+		};
+		AEA0FBC826AC9AC70041A15D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				AE05161B26895215009517C0 /* OrderedProductCell.swift */,
 				AE05161C26895215009517C0 /* OrderedProductCell.xib */,
-				AE051621268954D0009517C0 /* OrderedProduct.swift */,
 			);
-			path = Model;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AEA0FBC926AC9B7D0041A15D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AEA0FBD326ACCF890041A15D /* ActionButton.swift */,
+				AEA0FBCB26AC9BBA0041A15D /* TextField.swift */,
+				AEA0FBCD26AC9C410041A15D /* ProductButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		B0C65D5D911F111FC786FB92 /* Frameworks */ = {
@@ -237,11 +303,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE051622268954D0009517C0 /* OrderedProduct.swift in Sources */,
+				AE3D47F126A387A3008ACAA3 /* UIView+Ext.swift in Sources */,
+				AE051622268954D0009517C0 /* Product.swift in Sources */,
+				AEA0FBD426ACCF890041A15D /* ActionButton.swift in Sources */,
+				AEA0FBD026AC9D150041A15D /* ProductType.swift in Sources */,
 				AE0515FF2686DD12009517C0 /* OrderViewController.swift in Sources */,
+				AEA0FBCE26AC9C410041A15D /* ProductButton.swift in Sources */,
 				AE05161326892789009517C0 /* CookViewController.swift in Sources */,
-				AE0DFF2B268D0A0200C73ED3 /* DescriptionOfCell.swift in Sources */,
+				AE0DFF2B268D0A0200C73ED3 /* DescriptionViewController.swift in Sources */,
 				AE0515FB2686DD12009517C0 /* AppDelegate.swift in Sources */,
+				AEA0FBCC26AC9BBA0041A15D /* TextField.swift in Sources */,
+				AEA0FBD226ACA1D90041A15D /* Optonal+Ext.swift in Sources */,
 				AE0515FD2686DD12009517C0 /* SceneDelegate.swift in Sources */,
 				AE05161D26895215009517C0 /* OrderedProductCell.swift in Sources */,
 			);
