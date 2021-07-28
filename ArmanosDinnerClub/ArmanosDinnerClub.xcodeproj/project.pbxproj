@@ -25,6 +25,7 @@
 		AEA0FBD226ACA1D90041A15D /* Optonal+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0FBD126ACA1D90041A15D /* Optonal+Ext.swift */; };
 		AEA0FBD426ACCF890041A15D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0FBD326ACCF890041A15D /* ActionButton.swift */; };
 		AEE2CAF226B075AA00FF845A /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE2CAF126B075AA00FF845A /* RootTabBarController.swift */; };
+		AEE2CAF426B0F21D00FF845A /* ProductsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE2CAF326B0F21D00FF845A /* ProductsService.swift */; };
 		D40085A21175F86B1B28E58C /* Pods_ArmanosDinnerClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42429A6C11725C4033FB7911 /* Pods_ArmanosDinnerClub.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		AEA0FBD126ACA1D90041A15D /* Optonal+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optonal+Ext.swift"; sourceTree = "<group>"; };
 		AEA0FBD326ACCF890041A15D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		AEE2CAF126B075AA00FF845A /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		AEE2CAF326B0F21D00FF845A /* ProductsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				AE051621268954D0009517C0 /* Product.swift */,
 				AEA0FBCF26AC9D150041A15D /* ProductType.swift */,
+				AEE2CAF326B0F21D00FF845A /* ProductsService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				AEA0FBD226ACA1D90041A15D /* Optonal+Ext.swift in Sources */,
 				AE0515FD2686DD12009517C0 /* SceneDelegate.swift in Sources */,
 				AE05161D26895215009517C0 /* OrderedProductCell.swift in Sources */,
+				AEE2CAF426B0F21D00FF845A /* ProductsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

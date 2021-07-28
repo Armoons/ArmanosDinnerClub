@@ -26,7 +26,7 @@ class CookViewController: UIViewController, UITextFieldDelegate{
 
     var selectedType: ProductType?
     
-    var onCook: ProductBlock?
+    var onNewProductAdded: VoidBlock?
     
     func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
         self.view.endEditing(true)
@@ -110,10 +110,16 @@ class CookViewController: UIViewController, UITextFieldDelegate{
         DispatchQueue.main.asyncAfter(deadline: .now() + 2){ [self] in
             self.spinner.alpha = 0.0
             self.spinner.stopAnimating()
-            let image = selectedType?.icon?.withTintColor(UIColor(named: "CoolGreen") ?? UIColor.black)
-            let product = Product(name: nameTextField.text ?? "", price: Int(priceTextField.text ?? "") ?? 0, image: image)
+            let product = Product(
+                name: nameTextField.text ?? "",
+                price: Int(priceTextField.text ?? "") ?? 0,
+                type: selectedType ?? .burger
+            )
             [self.nameTextField,self.descriptionTextField, priceTextField].forEach { $0.text = "" }
-            onCook?(product)
+            
+            ProductsService.shared.addNew(product: product)
+            
+            onNewProductAdded?()
             didSelect(sender: nil)
         }
         
@@ -149,13 +155,6 @@ class CookViewController: UIViewController, UITextFieldDelegate{
     }
     
 }
-
-struct Product {
-    var name: String?
-    var price: Int?
-    var image: UIImage?
-}
-
 
 typealias VoidBlock = () -> ()
 typealias ProductBlock = (Product) -> ()

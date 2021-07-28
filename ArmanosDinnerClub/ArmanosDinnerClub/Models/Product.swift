@@ -8,32 +8,30 @@
 import UIKit
 
 
-
-class Products{
-    var productsArray = [Product]()
+struct Product {
     
-    init() {
-        setup()
+    private static var separator = "@"
+    
+    var name: String
+    var price: Int
+    var type: ProductType
+    
+    init(name: String, price: Int, type: ProductType) {
+        self.name = name
+        self.price = price
+        self.type = type
     }
     
-    func setup(){
-        productsArray = [
-            Product(name: "Бургер", price: 130, image: UIImage(named: "image")),
-            Product(name: "Картоха", price: 54, image: UIImage(named: "image")),
-            Product(name: "Твистер", price: 175, image: UIImage(named: "image")),
-//            Product(name: "Бургер", price: 130, image: UIImage(named: "image")),
-//            Product(name: "Картоха", price: 54, image: UIImage(named: "image")),
-//            Product(name: "Твистер", price: 175, image: UIImage(named: "image")),
-//            Product(name: "Бургер", price: 130, image: UIImage(named: "image")),
-//            Product(name: "Картоха", price: 54, image: UIImage(named: "image")),
-//            Product(name: "Твистер", price: 75, image: UIImage(named: "image")),
-//            Product(name: "Бургер", price: 130, image: UIImage(named: "image")),
-//            Product(name: "Картоха", price: 54, image: UIImage(named: "image")),
-//            Product(name: "Твистер", price: 75, image: UIImage(named: "image"))
-        ]
+    init?(string: String) {
+        let parts = string.split(separator: Self.separator.first!)
+        guard parts.count == 3 else { return nil }
+        let name = String(parts[0])
+        guard let price = Int(String(parts[1])) else { return nil }
+        guard let type = ProductType(rawValue: String(parts[2])) else { return nil }
+        self.init(name: name, price: price, type: type)
     }
     
-    func addProduct(){
-        
+    func toString() -> String {
+        name + Self.separator + "\(price)" + Self.separator + type.rawValue
     }
 }

@@ -33,6 +33,6 @@ class RootTabBarController: UITabBarController {
     
     private func bindControllers(order: OrderViewController, cook: CookViewController) {
 
-        cook.onCook = order.newProduct(info:)
+        cook.onNewProductAdded = order.update
     }
 }

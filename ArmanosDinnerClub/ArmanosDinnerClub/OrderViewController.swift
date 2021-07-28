@@ -10,7 +10,6 @@ import UIKit
 class OrderViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var orderedProduct = Products()
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "OrderedProductCell", bundle: nil), forCellWithReuseIdentifier: "OrderedProductCell")
@@ -18,29 +17,25 @@ class OrderViewController: UIViewController {
         collectionView.delegate = self
     }
     
-    func newProduct(info: Product) {
-        orderedProduct.productsArray.append(info)
+    func update() {
         collectionView.reloadData()
-        print(orderedProduct.productsArray)
-        print("new Product", info)
     }
 }
 
 extension OrderViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return orderedProduct.productsArray.count
+        return ProductsService.shared.allProducts().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OrderedProductCell", for: indexPath) as! OrderedProductCell
-        let product = orderedProduct.productsArray[indexPath.item]
-        print(product)
+        let product = ProductsService.shared.allProducts()[indexPath.row]
         cell.setupCell(product: product)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let selectedItem  = orderedProduct.productsArray[indexPath.item]
+        let product = ProductsService.shared.allProducts()[indexPath.row]
         present(DescriptionViewController(), animated: true)
     }
     
@@ -52,7 +47,3 @@ extension OrderViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return CGFloat(24)
     }
 }
-
-
-    
-
