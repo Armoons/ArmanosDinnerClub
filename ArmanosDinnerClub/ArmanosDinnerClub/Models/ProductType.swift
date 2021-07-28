@@ -26,4 +26,5 @@ enum ProductType: Equatable {
             return UIImage(named: "dish")
         }
     }
+
 }

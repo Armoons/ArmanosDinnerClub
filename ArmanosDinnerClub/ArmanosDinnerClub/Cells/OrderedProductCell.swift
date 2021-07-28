@@ -21,7 +21,7 @@ class OrderedProductCell: UICollectionViewCell {
     
     func setupCell(product: Product){
         self.nameLabel.text = product.name
-        self.priceLabel.text = "\(product.price) рублей"
+        self.priceLabel.text = "\(product.price ?? 0) рублей"
         self.productImage.image = product.image
     }
 

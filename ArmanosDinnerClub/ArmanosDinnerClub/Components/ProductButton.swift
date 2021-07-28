@@ -27,7 +27,7 @@ class ProductButton: UIButton{
     convenience init(type: ProductType) {
         self.init()
         self.type = type
-        set(image: type.icon)
+        set(image: type.icon, color: "CoolRed")
     }
     
     private func setupUI() {
@@ -37,9 +37,9 @@ class ProductButton: UIButton{
         }
     }
     
-    func set(image: UIImage?){
+    func set(image: UIImage?, color: String){
         self.setImage(image, for: .normal)
         self.setImage(image?.withRenderingMode(.alwaysTemplate), for: .selected)
-        self.tintColor = UIColor(named: "CoolRed")
+        self.tintColor = UIColor(named: color)
     }
 }

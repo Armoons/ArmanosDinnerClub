@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+class RootTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,7 @@ class TabBarController: UITabBarController {
     }
     
     private func bindControllers(order: OrderViewController, cook: CookViewController) {
-        print(order, cook)
+
+        cook.onCook = order.newProduct(info:)
     }
 }

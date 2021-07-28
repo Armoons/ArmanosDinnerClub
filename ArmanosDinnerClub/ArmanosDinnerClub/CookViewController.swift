@@ -26,6 +26,8 @@ class CookViewController: UIViewController, UITextFieldDelegate{
 
     var selectedType: ProductType?
     
+    var onCook: ProductBlock?
+    
     func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
         self.view.endEditing(true)
     }
@@ -65,7 +67,7 @@ class CookViewController: UIViewController, UITextFieldDelegate{
         
         //StackButtons
         [burgerButton, chipsButton, juiceButton, dishButton]
-            .forEach { $0.addTarget(self, action: #selector(isSelected), for: .touchUpInside) }
+            .forEach { $0.addTarget(self, action: #selector(didSelect), for: .touchUpInside) }
         
 
         
@@ -102,13 +104,30 @@ class CookViewController: UIViewController, UITextFieldDelegate{
         UIView.animate(withDuration: 1) {
             self.spinner.alpha = 1.0
             self.spinner.startAnimating()
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-            self.spinner.alpha = 0.0
-            self.spinner.stopAnimating()
+            self.cookButton.backgroundColor = UIColor(red: 113/255, green: 133/255, blue: 139/255, alpha: 1.0)
         }
         
-        print("frfr")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2){ [self] in
+            self.spinner.alpha = 0.0
+            self.spinner.stopAnimating()
+            let image = selectedType?.icon?.withTintColor(UIColor(named: "CoolGreen") ?? UIColor.black)
+            let product = Product(name: nameTextField.text ?? "", price: Int(priceTextField.text ?? "") ?? 0, image: image)
+            [self.nameTextField,self.descriptionTextField, priceTextField].forEach { $0.text = "" }
+            onCook?(product)
+            didSelect(sender: nil)
+        }
+        
+//        self.cookButton.backgroundColor = UIColor(red: 158/255, green: 177/255, blue: 185/255, alpha: 1)
+
+        
+    }
+    
+    @objc func didSelect(sender: ProductButton?){
+        selectedType = sender?.type
+        burgerButton.isSelected = sender == burgerButton
+        chipsButton.isSelected = sender == chipsButton
+        juiceButton.isSelected = sender == juiceButton
+        dishButton.isSelected = sender == dishButton
     }
     
     @objc private func showAlert() {
@@ -119,13 +138,7 @@ class CookViewController: UIViewController, UITextFieldDelegate{
         present(alertController, animated: true, completion: nil)
     }
     
-    @objc func isSelected(sender: ProductButton){
-        selectedType = sender.type
-        burgerButton.isSelected = sender == burgerButton
-        chipsButton.isSelected = sender == chipsButton
-        juiceButton.isSelected = sender == juiceButton
-        dishButton.isSelected = sender == dishButton
-    }
+   
     
     // Hide Keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -137,7 +150,12 @@ class CookViewController: UIViewController, UITextFieldDelegate{
     
 }
 
+struct Product {
+    var name: String?
+    var price: Int?
+    var image: UIImage?
+}
 
 
-
-
+typealias VoidBlock = () -> ()
+typealias ProductBlock = (Product) -> ()

@@ -33,7 +33,6 @@ class DescriptionViewController: UIViewController{
             $0.bottomMargin.equalToSuperview().inset(22)
         }
         
-        nameOrderedLabel.text = "Картоха"
         nameOrderedLabel.font = UIFont.boldSystemFont(ofSize: 24)
         nameOrderedLabel.snp.makeConstraints { maker in
             maker.centerX.equalToSuperview().offset(-15)

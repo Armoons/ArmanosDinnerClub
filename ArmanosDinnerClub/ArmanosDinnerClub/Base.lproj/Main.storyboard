@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sEO-k6-TSA">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="CollectionView" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sEO-k6-TSA">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="VdL-Yy-epb">
@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="-168.11594202898553" y="748.66071428571422"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Root Tab Bar Controller-->
         <scene sceneID="nLJ-eL-bjO">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="H45-Tj-cad" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="H45-Tj-cad" customClass="RootTabBarController" customModule="ArmanosDinnerClub" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G2N-Sz-doY">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -93,21 +93,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3P-nv-otV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="49" y="28"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="U2b-UC-l26">
-            <objects>
-                <viewController id="87x-Om-9DI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gWq-vP-icj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="9Ve-ST-1gg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SVY-w3-aNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2668" y="910"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q2r-pS-oqN">

@@ -17,6 +17,13 @@ class OrderViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
+    
+    func newProduct(info: Product) {
+        orderedProduct.productsArray.append(info)
+        collectionView.reloadData()
+        print(orderedProduct.productsArray)
+        print("new Product", info)
+    }
 }
 
 extension OrderViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -27,6 +34,7 @@ extension OrderViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OrderedProductCell", for: indexPath) as! OrderedProductCell
         let product = orderedProduct.productsArray[indexPath.item]
+        print(product)
         cell.setupCell(product: product)
         return cell
     }
