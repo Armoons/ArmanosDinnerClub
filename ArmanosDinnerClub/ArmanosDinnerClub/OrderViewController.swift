@@ -18,11 +18,15 @@ class OrderViewController: UIViewController {
     }
     
     func update() {
-        collectionView.reloadData()
+        UIView.transition(with: collectionView,
+                          duration: 0.35,
+                          options: .transitionCrossDissolve,
+                          animations: { self.collectionView.reloadData() })
     }
 }
 
 extension OrderViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ProductsService.shared.allProducts().count
     }
@@ -36,7 +40,9 @@ extension OrderViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let product = ProductsService.shared.allProducts()[indexPath.row]
-        present(DescriptionViewController(), animated: true)
+        let descriptionViewController = DescriptionViewController()
+        descriptionViewController.set(product: product)
+        present(descriptionViewController, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

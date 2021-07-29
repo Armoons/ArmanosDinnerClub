@@ -14,11 +14,15 @@ class ProductsService {
         }
     }
     
+    func settingDescription(){
+        
+    }
+    
     func writeDefaultProducts() {
         let productsArray = [
-            Product(name: "Бургер", price: 130, type: .burger),
-            Product(name: "Картоха", price: 54, type: .chips),
-            Product(name: "Твистер", price: 175, type: .burger)
+            Product(name: "Бургер", price: 130, type: .burger, description: "Картофель Фри - это порция хрустящик, золотистых, обжаренных в растительном фритюре и слегка посоленных соломок отборного картофеля."),
+            Product(name: "Картоха", price: 54, type: .chips, description: "Картофель Фри - это порция хрустящик, золотистых, обжаренных в растительном фритюре и слегка посоленных соломок отборного картофеля."),
+            Product(name: "Твистер", price: 175, type: .burger, description: "Картофель Фри - это порция хрустящик, золотистых, обжаренных в растительном фритюре и слегка посоленных соломок отборного картофеля.")
         ]
         
         for product in productsArray {

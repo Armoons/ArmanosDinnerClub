@@ -113,7 +113,8 @@ class CookViewController: UIViewController, UITextFieldDelegate{
             let product = Product(
                 name: nameTextField.text ?? "",
                 price: Int(priceTextField.text ?? "") ?? 0,
-                type: selectedType ?? .burger
+                type: selectedType ?? .burger,
+                description: descriptionTextField.text ?? ""
             )
             [self.nameTextField,self.descriptionTextField, priceTextField].forEach { $0.text = "" }
             
