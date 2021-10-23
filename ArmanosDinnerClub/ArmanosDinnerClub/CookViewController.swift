@@ -9,33 +9,30 @@ import UIKit
 import SnapKit
 
 class CookViewController: UIViewController, UITextFieldDelegate{
-    let nameTextField = TextField()
-    let descriptionTextField = TextField()
-    let priceTextField = TextField()
     
-    let burgerButton = ProductButton(type: .burger)
-    let chipsButton = ProductButton(type: .chips)
-    let juiceButton = ProductButton(type: .juice)
-    let dishButton = ProductButton(type: .dish)
+    private let nameTextField = TextField()
+    private let descriptionTextField = TextField()
+    private let priceTextField = TextField()
     
-    let cookButton = ActionButton(title: "Приготовить")
-    let firstHorStackView = UIStackView()
-    let secondHorStackView = UIStackView()
-    let verStackView = UIStackView()
-    let spinner = UIActivityIndicatorView()
+    private let burgerButton = ProductButton(type: .burger)
+    private let chipsButton = ProductButton(type: .chips)
+    private let juiceButton = ProductButton(type: .juice)
+    private let dishButton = ProductButton(type: .dish)
+    
+    private let cookButton = ActionButton(title: "Приготовить")
+    private let firstHorStackView = UIStackView()
+    private let secondHorStackView = UIStackView()
+    private let verStackView = UIStackView()
+    private let spinner = UIActivityIndicatorView()
 
     var selectedType: ProductType?
-    
     var onNewProductAdded: VoidBlock?
     
-    func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
-        self.view.endEditing(true)
-    }
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.nameTextField.delegate = self
         self.descriptionTextField.delegate = self
-        
         
         view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
         for i in [nameTextField,descriptionTextField,priceTextField, verStackView, cookButton, spinner] {
@@ -52,7 +49,7 @@ class CookViewController: UIViewController, UITextFieldDelegate{
             $0.centerX.equalToSuperview()
             $0.bottomMargin.equalToSuperview().inset(22)
         }
-
+        
         cookButton.addTarget(self, action: #selector(sendInfo), for: .touchUpInside)
         
         //TextField
@@ -68,9 +65,7 @@ class CookViewController: UIViewController, UITextFieldDelegate{
         //StackButtons
         [burgerButton, chipsButton, juiceButton, dishButton]
             .forEach { $0.addTarget(self, action: #selector(didSelect), for: .touchUpInside) }
-        
-
-        
+    
         //StackView
         verStackView.addArrangedSubview(firstHorStackView)
         verStackView.addArrangedSubview(secondHorStackView)
@@ -92,6 +87,7 @@ class CookViewController: UIViewController, UITextFieldDelegate{
     }
     
     @objc func sendInfo(){
+        
         guard !nameTextField.text.isNilOrEmpty,
               !descriptionTextField.text.isNilOrEmpty,
               !priceTextField.text.isNilOrEmpty,
@@ -123,10 +119,6 @@ class CookViewController: UIViewController, UITextFieldDelegate{
             onNewProductAdded?()
             didSelect(sender: nil)
         }
-        
-//        self.cookButton.backgroundColor = UIColor(red: 158/255, green: 177/255, blue: 185/255, alpha: 1)
-
-        
     }
     
     @objc func didSelect(sender: ProductButton?){

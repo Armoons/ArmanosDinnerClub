@@ -16,7 +16,6 @@ class OrderedProductCell: UICollectionViewCell {
         super.awakeFromNib()
         self.makeShadow()
         self.layer.shadowPath = UIBezierPath(roundedRect:self.bounds, cornerRadius:self.layer.cornerRadius).cgPath
-        
     }
     
     func setupCell(product: Product){

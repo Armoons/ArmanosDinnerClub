@@ -4,12 +4,12 @@
 //
 //  Created by Stepanyan Arman  on 17.07.2021.
 //
-import Foundation
 import UIKit
 import SnapKit
 
 
 public extension UIView {
+    
     func makeShadow(){
         self.layer.cornerRadius = 12
         self.layer.backgroundColor = UIColor.white.cgColor

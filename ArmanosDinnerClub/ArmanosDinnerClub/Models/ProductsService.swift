@@ -13,11 +13,7 @@ class ProductsService {
             writeDefaultProducts()
         }
     }
-    
-    func settingDescription(){
-        
-    }
-    
+
     func writeDefaultProducts() {
         let productsArray = [
             Product(name: "Бургер", price: 130, type: .burger, description: "Картофель Фри - это порция хрустящик, золотистых, обжаренных в растительном фритюре и слегка посоленных соломок отборного картофеля."),

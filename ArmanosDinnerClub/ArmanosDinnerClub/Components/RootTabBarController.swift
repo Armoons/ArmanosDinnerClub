@@ -14,8 +14,6 @@ class RootTabBarController: UITabBarController {
         
         let viewControllers = viewControllers ?? []
         
-
-        
         let firstControllers = viewControllers
             .map { $0 as? UINavigationController }
             .compactMap { $0?.viewControllers.first }
@@ -34,7 +32,7 @@ class RootTabBarController: UITabBarController {
     }
     
     private func bindControllers(order: OrderViewController, cook: CookViewController) {
-
+        
         cook.onNewProductAdded = order.update
     }
 }

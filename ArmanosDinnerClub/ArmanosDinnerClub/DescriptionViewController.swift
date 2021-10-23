@@ -32,7 +32,6 @@ class DescriptionViewController: UIViewController{
             view.addSubview(i)
         }
         
-        
         orderButton.snp.makeConstraints{
             $0.centerX.equalToSuperview()
             $0.bottomMargin.equalToSuperview().inset(22)
@@ -43,7 +42,7 @@ class DescriptionViewController: UIViewController{
             $0.centerX.equalToSuperview().offset(-15)
             $0.topMargin.equalToSuperview().inset(40)
         }
-//        product.type.icon?.withTintColor(UIColor(named: "CoolGreen")!)
+        
         iconOrdered.image?.withTintColor(UIColor(named: "CoolGreen") ?? .black)
         iconOrdered.snp.makeConstraints {
             $0.left.equalTo(nameOrderedLabel.snp.right).inset(-10)
@@ -61,8 +60,6 @@ class DescriptionViewController: UIViewController{
             $0.centerX.equalToSuperview()
             $0.top.equalTo(orderButton).inset(-45)
         }
-        
-        
     }
     
     func set(product: Product){
@@ -70,7 +67,5 @@ class DescriptionViewController: UIViewController{
         iconOrdered.image = product.type.icon?.withTintColor(UIColor(named: "CoolGreen")!)
         descriptionOrderedLabel.text = product.description
         priceOrderedLable.text = String(product.price) + " рублей"
-
-
     }
 }
