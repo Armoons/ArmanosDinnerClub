@@ -10,9 +10,10 @@ import UIKit
 
 protocol CookViewDelegate {
     func presentAler()
+    func cookPressed()
 }
 
-class CookView: UIView {
+class CookView: UIView, UITextFieldDelegate {
     
     var delegate: CookViewDelegate?
     
@@ -129,7 +130,7 @@ class CookView: UIView {
                 description: descriptionTextField.text ?? ""
             )
             [self.nameTextField,self.descriptionTextField, priceTextField].forEach { $0.text = "" }
-            
+            delegate?.cookPressed()
             ProductsService.shared.addNew(product: product)
             
             onNewProductAdded?()

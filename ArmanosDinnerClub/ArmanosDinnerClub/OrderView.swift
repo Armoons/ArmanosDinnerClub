@@ -93,3 +93,9 @@ extension OrderView: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         return CGFloat(24)
     }
 }
+
+extension OrderView: OrderViewControllerDelegateToView {
+    func updateCollView() {
+        collectionView.reloadData()
+    }
+}

@@ -8,8 +8,13 @@ import Foundation
 import UIKit
 import SnapKit
 
-class CookViewController: UIViewController, UITextFieldDelegate{
-    
+protocol CookViewControllerDelegate {
+    func buttonPressed()
+}
+
+
+class CookViewController: UIViewController{
+    var delegate: CookViewControllerDelegate?
     private let cookView = CookView()
     
 //    private let nameTextField = TextField()
@@ -161,6 +166,10 @@ class CookViewController: UIViewController, UITextFieldDelegate{
 }
 
 extension CookViewController: CookViewDelegate {
+    func cookPressed() {
+        delegate?.buttonPressed()
+    }
+    
     func presentAler() {
         let message = "Введите все данные блюда"
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)

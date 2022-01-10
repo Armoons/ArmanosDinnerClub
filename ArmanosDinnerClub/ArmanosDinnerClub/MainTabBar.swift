@@ -10,6 +10,8 @@ import UIKit
 
 class MainTabBar: UITabBarController {
     
+    private let cookVC = CookViewController()
+    private let orderVC = OrderViewController()
     
     
     override func viewDidLoad() {
@@ -40,14 +42,16 @@ class MainTabBar: UITabBarController {
         self.definesPresentationContext = true
         guard let cookImage: UIImage = UIImage(named: "Cook") else { return }
         guard let dinnerImage: UIImage = UIImage(named: "Dinner") else { return }
-//
-        let cookController = createNavigationVC(vc: CookViewController(), itemImage: cookImage)
-        let orderController = createNavigationVC(vc: OrderViewController(), itemImage: dinnerImage)
+
+        let cookController = createNavigationVC(vc: cookVC, itemImage: cookImage)
+        let orderController = createNavigationVC(vc: orderVC, itemImage: dinnerImage)
+        
+        cookVC.delegate = orderVC
         
         viewControllers = [orderController, cookController]
         
-        navigationController?.navigationBar.barTintColor = .red
-        navigationController?.navigationBar.tintColor = .red
+//        navigationController?.navigationBar.barTintColor = .red
+//        navigationController?.navigationBar.tintColor = .red
 
         guard let items = tabBar.items else { return }
         

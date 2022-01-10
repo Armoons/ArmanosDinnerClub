@@ -5,8 +5,12 @@
 //  Created by Stepanyan Arman  on 25.06.2021.
 //
 
-protocol OrderViewControllerDelegate{
+protocol OrderViewControllerDelegateToDescription{
     func selectedProduct(product: Product)
+}
+
+protocol OrderViewControllerDelegateToView{
+    func updateCollView()
 }
 
 import UIKit
@@ -15,8 +19,11 @@ class OrderViewController: UIViewController {
     
     private let orderView = OrderView()
     private let descriptionVC = DescriptionViewController()
+    private let cookVC = CookViewController()
     
-    var delegate: OrderViewControllerDelegate?
+    var delegateDescr: OrderViewControllerDelegateToDescription?
+    var delegateView: OrderViewControllerDelegateToView?
+
     
     override func loadView() {
         self.view = orderView
@@ -24,7 +31,9 @@ class OrderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         orderView.delegate = self
-        self.delegate = descriptionVC
+        delegateView = orderView
+        self.delegateDescr = descriptionVC
+        cookVC.delegate = self
         self.navigationItem.title = "Заказать"
 //        self.navigationController?.navigationBar.barTintColor = .red
 //        self.navigationController?.toolbar.tintColor = .red
@@ -36,44 +45,25 @@ class OrderViewController: UIViewController {
 //        UIView.transition(with: collectionView,
 //                          duration: 0.35,
 //                          options: .transitionCrossDissolve,
-//                          animations: { self.collectionView.reloadData() })
+//                          animations: {
+//    self.collectionView.reloadData()
+    
+//    })
 //    }
 }
 
 extension OrderViewController: OrderViewDelegate {
     func selectedProduct(product: Product) {
         present(descriptionVC, animated: true)
-        delegate?.selectedProduct(product: product)
+        delegateDescr?.selectedProduct(product: product)
+    }
+}
+
+extension OrderViewController: CookViewControllerDelegate {
+    func buttonPressed() {
+        delegateView?.updateCollView()
     }
     
     
 }
 
-//extension OrderViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return ProductsService.shared.allProducts().count
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OrderedProductCell", for: indexPath) as! OrderedProductCell
-//        let product = ProductsService.shared.allProducts()[indexPath.row]
-//        cell.setupCell(product: product)
-//        return cell
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let product = ProductsService.shared.allProducts()[indexPath.row]
-//        let descriptionViewController = DescriptionViewController()
-//        descriptionViewController.set(product: product)
-//        present(descriptionViewController, animated: true)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: (view.frame.width - 48) / 2, height: 128)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return CGFloat(24)
-//    }
-//}

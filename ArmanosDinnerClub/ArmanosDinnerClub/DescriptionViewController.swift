@@ -75,7 +75,7 @@ class DescriptionViewController: UIViewController{
 //    }
 }
 
-extension DescriptionViewController: OrderViewControllerDelegate {
+extension DescriptionViewController: OrderViewControllerDelegateToDescription {
     func selectedProduct(product: Product) {
         delegate?.productForShow(product: product)
     }
