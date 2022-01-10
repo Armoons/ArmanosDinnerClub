@@ -17,6 +17,9 @@
 		AE05161D26895215009517C0 /* OrderedProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05161B26895215009517C0 /* OrderedProductCell.swift */; };
 		AE05161E26895215009517C0 /* OrderedProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE05161C26895215009517C0 /* OrderedProductCell.xib */; };
 		AE051622268954D0009517C0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE051621268954D0009517C0 /* Product.swift */; };
+		AE074A6027709DC600832CDA /* CookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE074A5F27709DC600832CDA /* CookView.swift */; };
+		AE074A622770A10000832CDA /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE074A612770A10000832CDA /* MainTabBar.swift */; };
+		AE074A642770A37900832CDA /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE074A632770A37900832CDA /* OrderView.swift */; };
 		AE0DFF2B268D0A0200C73ED3 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0DFF2A268D0A0200C73ED3 /* DescriptionViewController.swift */; };
 		AE3D47F126A387A3008ACAA3 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D47F026A387A3008ACAA3 /* UIView+Ext.swift */; };
 		AEA0FBCC26AC9BBA0041A15D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0FBCB26AC9BBA0041A15D /* TextField.swift */; };
@@ -45,6 +48,9 @@
 		AE05161B26895215009517C0 /* OrderedProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedProductCell.swift; sourceTree = "<group>"; };
 		AE05161C26895215009517C0 /* OrderedProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderedProductCell.xib; sourceTree = "<group>"; };
 		AE051621268954D0009517C0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		AE074A5F27709DC600832CDA /* CookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookView.swift; sourceTree = "<group>"; };
+		AE074A612770A10000832CDA /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		AE074A632770A37900832CDA /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		AE0DFF2A268D0A0200C73ED3 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		AE3D47F026A387A3008ACAA3 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		AEA0FBCB26AC9BBA0041A15D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 			children = (
 				AE0515FA2686DD12009517C0 /* AppDelegate.swift */,
 				AE0515FC2686DD12009517C0 /* SceneDelegate.swift */,
+				AE074A612770A10000832CDA /* MainTabBar.swift */,
 				AE0516202689522D009517C0 /* Models */,
 				AEA0FBC926AC9B7D0041A15D /* Components */,
 				AE05160E26891E14009517C0 /* Controllers */,
@@ -146,6 +153,7 @@
 			children = (
 				AEA0FBC826AC9AC70041A15D /* Cells */,
 				AE0515FE2686DD12009517C0 /* OrderViewController.swift */,
+				AE074A632770A37900832CDA /* OrderView.swift */,
 			);
 			name = Order;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				AE05161226892789009517C0 /* CookViewController.swift */,
+				AE074A5F27709DC600832CDA /* CookView.swift */,
 			);
 			name = Cook;
 			sourceTree = "<group>";
@@ -309,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE074A6027709DC600832CDA /* CookView.swift in Sources */,
 				AE3D47F126A387A3008ACAA3 /* UIView+Ext.swift in Sources */,
 				AE051622268954D0009517C0 /* Product.swift in Sources */,
 				AEA0FBD426ACCF890041A15D /* ActionButton.swift in Sources */,
@@ -323,6 +333,8 @@
 				AEA0FBD226ACA1D90041A15D /* Optional+Ext.swift in Sources */,
 				AE0515FD2686DD12009517C0 /* SceneDelegate.swift in Sources */,
 				AE05161D26895215009517C0 /* OrderedProductCell.swift in Sources */,
+				AE074A642770A37900832CDA /* OrderView.swift in Sources */,
+				AE074A622770A10000832CDA /* MainTabBar.swift in Sources */,
 				AEE2CAF426B0F21D00FF845A /* ProductsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

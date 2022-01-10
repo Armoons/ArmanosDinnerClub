@@ -23,8 +23,6 @@ class DescriptionViewController: UIViewController{
         initialize()
     }
     
-        
-    
     private func initialize(){
         
         view.backgroundColor = .white
