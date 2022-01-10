@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 protocol OrderViewDelegate {
-    func selectedProduc(product: Product)
+    func selectedProduct(product: Product)
 }
 
 class OrderView: UIView {
@@ -33,6 +33,8 @@ class OrderView: UIView {
         return cv
     }()
     
+    var delegate:OrderViewDelegate?
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -44,6 +46,8 @@ class OrderView: UIView {
     }
     
     func setupUI() {
+        self.backgroundColor = .red
+//        self.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 0)
 //        collectionView.register(UINib(nibName: "OrderedProductCell", bundle: nil), forCellWithReuseIdentifier: "OrderedProductCell")
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -78,8 +82,7 @@ extension OrderView: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let product = ProductsService.shared.allProducts()[indexPath.row]
         let descriptionViewController = DescriptionViewController()
-        descriptionViewController.set(product: product)
-//        present(descriptionViewController, animated: true)
+        delegate?.selectedProduct(product: product)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

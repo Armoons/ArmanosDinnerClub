@@ -7,8 +7,8 @@
 
 import UIKit
 
-//class RootTabBarController: UITabBarController {
-//    
+class RootTabBarController: UITabBarController {
+    
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //        
@@ -25,14 +25,14 @@ import UIKit
 //        let cookViewController = firstControllers
 //            .compactMap { $0 as? CookViewController }
 //            .first
-//        
+        
 //        if let orderViewController = orderViewController, let cookViewController = cookViewController {
 //            bindControllers(order: orderViewController, cook: cookViewController)
 //        }
 //    }
-//    
+    
 //    private func bindControllers(order: OrderViewController, cook: CookViewController) {
 //
 //        cook.onNewProductAdded = order.update
 //    }
-//}
+}

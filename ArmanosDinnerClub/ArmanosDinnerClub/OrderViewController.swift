@@ -5,19 +5,29 @@
 //  Created by Stepanyan Arman  on 25.06.2021.
 //
 
+protocol OrderViewControllerDelegate{
+    func selectedProduct(product: Product)
+}
+
 import UIKit
 
 class OrderViewController: UIViewController {
     
     private let orderView = OrderView()
+    private let descriptionVC = DescriptionViewController()
     
+    var delegate: OrderViewControllerDelegate?
     
     override func loadView() {
         self.view = orderView
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        orderView.delegate = self
+        self.delegate = descriptionVC
         self.navigationItem.title = "Заказать"
+//        self.navigationController?.navigationBar.barTintColor = .red
+//        self.navigationController?.toolbar.tintColor = .red
 //        collectionView.dataSource = self
 //        collectionView.delegate = self
     }
@@ -28,6 +38,15 @@ class OrderViewController: UIViewController {
 //                          options: .transitionCrossDissolve,
 //                          animations: { self.collectionView.reloadData() })
 //    }
+}
+
+extension OrderViewController: OrderViewDelegate {
+    func selectedProduct(product: Product) {
+        present(descriptionVC, animated: true)
+        delegate?.selectedProduct(product: product)
+    }
+    
+    
 }
 
 //extension OrderViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
